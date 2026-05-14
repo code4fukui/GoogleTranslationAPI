@@ -1,29 +1,27 @@
 # GoogleTranslationAPI
 
-> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+Google Cloud Translation API を使用するためのライブラリです。
 
-A library for using the Google Cloud Translation API.
+## 機能
+- Node.js をサポート
+- Deno には非対応
 
-## Features
-- Supports Node.js
-- Does not support Deno
+## 必要条件
+- Google Cloud Platform のプロジェクトIDと認証情報が必要です
 
-## Requirements
-- Requires a Google Cloud Platform project ID and authentication credentials
+## 使い方
 
-## Usage
-
-1. Install the required package:
+1. 必要なパッケージをインストールします:
 ```
 npm install @google-cloud/translate
 ```
 
-2. Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the path of your Google Cloud Platform authentication credentials:
+2. `GOOGLE_APPLICATION_CREDENTIALS` 環境変数に Google Cloud Platform の認証情報のパスを設定します:
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=./apikey/codeforfukui-1362-cedbf3d2144a.json
 ```
 
-3. Use the library to translate text:
+3. ライブラリを使用してテキストを翻訳します:
 ```javascript
 const { TranslationServiceClient } = require('@google-cloud/translate').v3beta1;
 
@@ -52,5 +50,5 @@ async function translateText() {
 translateText();
 ```
 
-## License
-MIT License — see [LICENSE](LICENSE).
+## ライセンス
+MIT License — 詳細は [LICENSE](LICENSE) を参照してください。
